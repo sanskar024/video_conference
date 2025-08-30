@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "621702672406",
+    "project_id": "video-10fd9",
+    "storage_bucket": "video-10fd9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621702672406:android:878462736c625daa120537",
+        "android_client_info": {
+          "package_name": "com.example.video_conference"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621702672406-vn3arpu9agrhts74rkcm4u7ogpigbshh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCSzhivLU9ZWjpn-IvdBsQ1FGM4JUu_bC4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621702672406-vn3arpu9agrhts74rkcm4u7ogpigbshh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

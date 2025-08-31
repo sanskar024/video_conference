@@ -1,7 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:video_conference/resources/auth.dart';
 import 'package:video_conference/widgets/button.dart';
+import 'package:video_conference/screens/home.dart';// Assuming this is the correct path for your Button widget
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -10,6 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+   // Renamed Auth to AuthMethods
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +29,15 @@ class _LoginPageState extends State<LoginPage> {
               child: Image.asset('assets/images/onboarding.jpg'),
             ),
             
-        Button( data: 'Login', onPressed: (){},),
+        Button( data: 'Login', onPressed: ()async{
+          final user = await signInWithGoogle();
+          if(user != null){
+            print("Logged IN");
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Home()));
+          }else{
+            print("Login Failed");
+          }
+        },),
           ],
         ),
       )

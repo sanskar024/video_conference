@@ -10,7 +10,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _page = 0;
-
   onPageChanged(int index) {
     setState(() {
       _page = index;

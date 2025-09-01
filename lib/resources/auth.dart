@@ -24,7 +24,7 @@ Future<String> signInWithGoogle() async {
     // Step 4: Sign in to Firebase
     await _auth.signInWithCredential(credential);
 
-    res = "success";
+      return "success";
   } on FirebaseAuthException catch (e) {
     res = e.message ?? "An unknown Firebase error occurred.";
   } catch (e) {

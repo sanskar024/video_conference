@@ -9,12 +9,12 @@ class Button extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(18.0),
-      child: ElevatedButton(onPressed: (){onPressed;}, child: Text(data,style: TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color: Colors.white),),
+      child: ElevatedButton(onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: buttonColor, // fixed
         minimumSize: const Size(double.infinity, 50),
-      ),
-      
+      ), child: Text(data,style: const TextStyle(fontSize: 17,fontWeight: FontWeight.bold,color: Colors.white),),
+     
       ),
     );
   }

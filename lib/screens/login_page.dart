@@ -1,5 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
+
 import 'package:flutter/material.dart';
 import 'package:video_conference/resources/auth.dart';
 import 'package:video_conference/widgets/button.dart';
@@ -10,7 +9,6 @@ class LoginPage extends StatefulWidget {
   @override
   State<LoginPage> createState() => _LoginPageState();
 }
-
 class _LoginPageState extends State<LoginPage> {
    // Renamed Auth to AuthMethods
   @override
@@ -19,7 +17,6 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          
           children: [
             const Text("Join Meeting",style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
             const SizedBox(height: 20,),

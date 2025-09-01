@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:video_conference/screens/Meeting.dart';
+import 'package:video_conference/screens/history.dart';
 import 'package:video_conference/utils/color.dart';
+
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -9,6 +12,12 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<Widget>pages=[const Metting(),
+  const History(),
+  Text("contacts"),
+  Text("settings")
+
+  ];
   int _page = 0;
   onPageChanged(int index) {
     setState(() {
@@ -28,6 +37,7 @@ class _HomeState extends State<Home> {
         ),
         centerTitle: true,
       ),
+      body: pages[_page],
         
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
@@ -56,3 +66,4 @@ class _HomeState extends State<Home> {
     );
   }
 }
+

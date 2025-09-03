@@ -27,7 +27,8 @@ class _LoginPageState extends State<LoginPage> {
             ),
             
         Button( data: 'Login', onPressed: ()async{
-          final user = await signInWithGoogle();
+          Auth auth = Auth();
+          final user = await auth.signInWithGoogle();
           if(user != null){
             print("Logged IN");
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Home()));
